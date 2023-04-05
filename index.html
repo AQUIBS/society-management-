@@ -5,6 +5,7 @@
     <meta name="viewport" content="width = device-width, initial-scale=1.0">
     <link rel="Stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
 </head>
 <body>
@@ -23,9 +24,9 @@
 <div id="sideNav">
     <nav>
         <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">FEATURES</a></li>
-            <li><a href="#">SERVICES</a></li>
+            <li><a href="#banner">HOME</a></li>
+            <li><a href="#feature">FEATURES</a></li>
+            <li><a href="#service">SERVICES</a></li>
             <li><a href="#">TESTIMONIALS</a></li>
             <li><a href="#">ABOUT US</a></li>
         </ul>
@@ -117,6 +118,12 @@
             menu.src  = "images/menu.png";
         }
     }
+
+    // All animations will take exactly 500ms
+var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 500,
+	speedAsDuration: true
+});
 </script>
 </body>
 </html>
