@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+   
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(rgba(0,0,0,0.5),#e98930 ), url(images/background1.jpg);
+
+    
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #FFFF;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+
+}
+.container .title ::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    background: #e98930;
+
+}
+.container form .input-detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+form .input-detail .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+.input-detail .input-box .details{
+    display: block;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.input-detail .input-box input{
+    height: 55px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+
+}
+
+.input-detail .input-box input:focus,
+.input-detail .input-box input:valid{
+    border-color: #e98930;
+}
+form .flat-type .flat-title{
+    font-size: 20px;
+    font-weight: 600;
+
+}
+form .flat-type .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+   
+}
+.flat-type .category label{
+    display: flex;
+    align-items: center;
+}
+
+.flat-type .category .dot{
+    height: 18px;
+    width: 18px;
+    background: #9d9d9d;
+    border-radius: 50%;
+    border: 2px solid transparent ;
+    margin-right: 10px;
+}
+
+#dot-1:checked~ .category label .one,
+#dot-2:checked~ .category label .two,
+#dot-3:checked~ .category label .three,
+#dot-4:checked~ .category label .four{
+    border-color:#9d9d9d;
+    background: #dd5b5b00;
+
+}
+
+form input[type="radio"]{
+    display: none;
+}
+
+form .button{
+    height: 45px;
+    margin: 45px  0;
+}
+form .button input{
+ height: 100%;
+ width: 100%;
+ outline: none;
+ font-size: 20px;
+ font-weight: 600;
+ color: #FFFF;
+ background: #e98930;
+ border-radius: 6px;
+ letter-spacing: 1px;
+ border: none;
+}
