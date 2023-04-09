@@ -13,27 +13,27 @@
                 <div class="input-detail">
                     <div class="input-box">
                         <span class="details">Full Name</span>
-                        <input type="text" placeholder="Enter your name" required >
+                        <input type="text" id="full_name" placeholder="Enter your name" required >
                     </div>
                     <div class="input-box">
                         <span class="details">Flat No</span>
-                        <input type="text" placeholder="Enter your flat no" required >
+                        <input type="number" id="flat_number" placeholder="Enter your flat no" required >
                     </div>
                     <div class="input-box">
                         <span class="details">Family Members</span>
-                        <input type="text" placeholder="Enter your family count" required >
+                        <input type="number" id="family_member" placeholder="Enter your family count" required >
                     </div>
                     <div class="input-box">
                         <span class="details">Vehicle</span>
-                        <input type="text" placeholder="Enter your vehicle" required >
+                        <input type="number" id="vehicle_count" placeholder="Enter your vehicle" required >
                     </div>
                     <div class="input-box">
                         <span class="details">Vehicle no</span>
-                        <input type="text" placeholder="Enter your vehicle no" required >
+                        <input type="text" id="vehicle_number" placeholder="Enter your vehicle no" required >
                     </div>
                     <div class="input-box">
                         <span class="details">Contact Number</span>
-                        <input type="text" placeholder="Enter your contact no" required >
+                        <input type="number" id="contact_number"  placeholder="Enter your contact no" required >
                     </div>
                 </div>
                 <div class=" flat-type">
@@ -62,12 +62,33 @@
                         </label>
                     </div>
                 </div>
-                <div class="button">
-                    <input type="submit" value="Add Member">
-
+                <div id="add_button" class="button">
+                    <input type="submit"  value="Add Member"onclick  >
                 </div>
             </form>
     </div>
    
+
+    <script type="text/javascript"> 
+          var add_button =document.getElementById('add_button')
+
+           add_button.onclick = function (){
+            var full_name = document.getElementById("full_name").value;
+            var flat_number = document.getElementById("flat_number").value;
+            var family_member = document.getElementById("family_member").value;
+            var vehicle_count = document.getElementById("vehicle_count").value;
+            var  vehicle_number = document.getElementById("vehicle_number").value;
+            var contact_number = document.getElementById("contact_number").value;
+
+            localStorage.setItem('Is_full_name',full_name);
+            localStorage.setItem('Is_flat_number',flat_number);
+            localStorage.setItem('Is_family_member',family_member);
+            localStorage.setItem('Is_vehicle_count',vehicle_count);
+            localStorage.setItem('Is_vehilce_number',vehicle_number);
+            localStorage.setItem('Is_contact_number',contact_number);
+        }
+        
+
+    </script>
 </body>
 </html>

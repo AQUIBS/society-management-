@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
+    font-weight: 600;
    
 }
 
@@ -94,7 +95,7 @@ form .flat-type .category{
     width: 18px;
     background: #9d9d9d;
     border-radius: 50%;
-    border: 2px solid transparent ;
+    border: 9px solid transparent ;
     margin-right: 10px;
 }
 
@@ -102,9 +103,8 @@ form .flat-type .category{
 #dot-2:checked~ .category label .two,
 #dot-3:checked~ .category label .three,
 #dot-4:checked~ .category label .four{
-    border-color:#9d9d9d;
-    background: #dd5b5b00;
-
+    border-color:#e98930;
+  
 }
 
 form input[type="radio"]{
