@@ -1,94 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="add_mem_style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100&display=swap"
+        rel="stylesheet">
     <title>Add Member</title>
 </head>
+
 <body>
     <div class="container">
         <div class="title">Add Members</div>
-            <form action="#">
-                <div class="input-detail">
-                    <div class="input-box">
-                        <span class="details">Full Name</span>
-                        <input type="text" id="full_name" placeholder="Enter your name" required >
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Flat No</span>
-                        <input type="number" id="flat_number" placeholder="Enter your flat no" required >
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Family Members</span>
-                        <input type="number" id="family_member" placeholder="Enter your family count" required >
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Vehicle</span>
-                        <input type="number" id="vehicle_count" placeholder="Enter your vehicle" required >
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Vehicle no</span>
-                        <input type="text" id="vehicle_number" placeholder="Enter your vehicle no" required >
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Contact Number</span>
-                        <input type="number" id="contact_number"  placeholder="Enter your contact no" required >
-                    </div>
+        <form action="#">
+            <div class="input-detail">
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" id="full_name" placeholder="Enter your name" required>
                 </div>
-                <div class=" flat-type">
-                    <input type="radio" name="flats" id="dot-1" >
-                    <input type="radio" name="flats" id="dot-2" >
-                    <input type="radio" name="flats" id="dot-3" >
-                    <input type="radio" name="flats" id="dot-4" >
+                <div class="input-box">
+                    <span class="details">Flat No</span>
+                    <input type="number" id="flat_number" placeholder="Enter your flat no" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Family Members</span>
+                    <input type="number" id="family_member" placeholder="Enter your family count" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Vehicle Name</span>
+                    <input type="text" id="vehicle_name" placeholder="Enter your vehicle name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Vehicle no</span>
+                    <input type="text" id="vehicle_number" placeholder="Enter your vehicle no" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Contact Number</span>
+                    <input type="number" id="contact_number" placeholder="Enter your contact no" required>
+                </div>
+            </div>
+            <div class=" flat-type">
+                <input type="radio" name="flats" id="dot-1">
+                <input type="radio" name="flats" id="dot-2">
+                <input type="radio" name="flats" id="dot-3">
+                <input type="radio" name="flats" id="dot-4">
 
-                    <span class="flat-title">Apartment Type</span>
-                    <div class="category">
-                        <label for="dot-1">
-                            <span class="dot one"></span>
-                            <span class="flats">RK</span>
-                        </label>
-                        <label for="dot-2">
-                            <span class="dot two"></span>
-                            <span class="flats">1BHK</span>
-                        </label>
-                        <label for="dot-3">
-                            <span class="dot three"></span>
-                            <span class="flats">2BHK</span>
-                        </label>
-                        <label for="dot-4">
-                            <span class="dot four"></span>
-                            <span class="flats">3BHK</span>
-                        </label>
-                    </div>
+                <span class="flat-title">Apartment Type</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="flats">RK</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="flats">1BHK</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="flats">2BHK</span>
+                    </label>
+                    <label for="dot-4">
+                        <span class="dot four"></span>
+                        <span class="flats">3BHK</span>
+                    </label>
                 </div>
-                <div id="add_button" class="button">
-                    <input type="submit"  value="Add Member"onclick  >
-                </div>
-            </form>
+            </div>
+            <div id="add_button" class="button">
+                <input type="submit" value="Add Member">
+                <input type="submit" value="View Maintenance" onclick="window.location.href='view_maintenance.html';">
+
+            </div>
+        </form>
     </div>
-   
 
-    <script type="text/javascript"> 
-          var add_button =document.getElementById('add_button')
 
-           add_button.onclick = function (){
-            var full_name = document.getElementById("full_name").value;
-            var flat_number = document.getElementById("flat_number").value;
-            var family_member = document.getElementById("family_member").value;
-            var vehicle_count = document.getElementById("vehicle_count").value;
-            var  vehicle_number = document.getElementById("vehicle_number").value;
-            var contact_number = document.getElementById("contact_number").value;
-
-            localStorage.setItem('Is_full_name',full_name);
-            localStorage.setItem('Is_flat_number',flat_number);
-            localStorage.setItem('Is_family_member',family_member);
-            localStorage.setItem('Is_vehicle_count',vehicle_count);
-            localStorage.setItem('Is_vehilce_number',vehicle_number);
-            localStorage.setItem('Is_contact_number',contact_number);
-        }
-        
-
-    </script>
+    <script src="member.js"> </script>
 </body>
+
 </html>

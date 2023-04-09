@@ -1,14 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maintenance</title>
+    <title>View Maintenance</title>
+    <link rel="stylesheet" href="table_view.css">
+    <script>
+        function loadData() {
+            // Get the stored data from local storage
+            const storedData = JSON.parse(localStorage.getItem("formData"));
+            console.log(storedData);
+
+            // Clear any existing table data
+            const table = document.getElementById("storeList");
+            table.innerHTML = "";
+
+            // Add the table header
+            const header = table.createTHead();
+            const row = header.insertRow();
+            const srHeader = row.insertCell(0);
+            const nameHeader = row.insertCell(1);
+            const flatHeader = row.insertCell(2);
+            const vehicleHeader = row.insertCell(3);
+            const vehicleNoHeader = row.insertCell(4);
+            const contactHeader = row.insertCell(5);
+            const amountHeader = row.insertCell(6);
+            const editHeader = row.insertCell(7);
+            srHeader.innerHTML = "Sr no";
+            nameHeader.innerHTML = "Name";
+            flatHeader.innerHTML = "Flat";
+            vehicleHeader.innerHTML = "Vehicle";
+            vehicleNoHeader.innerHTML = "Vehicle name";
+            contactHeader.innerHTML = "Contact";
+            amountHeader.innerHTML = "Amount";
+            editHeader.innerHTML = "Edit";
+
+            // Add the table body with the stored data
+            const body = table.createTBody();
+            if (storedData) {
+                for (const data of storedData) {
+                    let count = 0;
+                    const row = body.insertRow();
+                    const srNoCell = row.insertCell(0);
+                    const nameCell = row.insertCell(1);
+                    const flatCell = row.insertCell(2);
+                    const vehicleCell = row.insertCell(3);
+                    const vehicleNoCell = row.insertCell(4);
+                    const contactCell = row.insertCell(5);
+                    const amountCell = row.insertCell(6);
+                    const editCell = row.insertCell(7);
+                    srNoCell.innerHTML = count++;
+                    nameCell.innerHTML = data.full_name;
+                    flatCell.innerHTML = data.flat_number;
+                    vehicleCell.innerHTML = data.vehicle_name;
+                    vehicleNoCell.innerHTML = data.vehicle_number;
+                    contactCell.innerHTML = data.contact_number;
+                    amountCell.innerHTML = data.family_member * 700;
+                    editCell.innerHTML = "null";
+                }
+            }
+        }
+    </script>
+
 </head>
+
+
 <body>
-    <h1>View Maintenance</h1> 
-    <br>
-    <a href="index.html">GO Back<a>
+    <section id="data-table">
+        <div id="table">
+            <table class="list" id="storeList">
+                <thread>
+                    <tr>
+                        <th>Sr no</th>
+                        <th>Name</th>
+                        <th>Flat </th>
+                        <th>Vehicle Name</th>
+                        <th>Vehicle No</th>
+                        <th>Contact Number</th>
+                        <th>Maintenance Amount</th>
+                        <th>Edit</th>
+
+                    </tr>
+                </thread>
+                <tbody>
+
+                </tbody>
+                <script>
+                    loadData();
+                </script>
+
+            </table>
+        </div>
+    </section>>
 </body>
+
 </html>
